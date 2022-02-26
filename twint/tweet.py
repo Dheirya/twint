@@ -155,10 +155,9 @@ def Tweet(tw, config):
     t.trans_dest = ''
     if config.Translate:
         try:
-            ts = translator.translate(text=t.tweet, dest=config.TranslateDest)
-            t.translate = ts.text
-            t.trans_src = ts.src
-            t.trans_dest = ts.dest
+            t.translate = text
+            t.trans_src = src
+            t.trans_dest = dest
         # ref. https://github.com/SuniTheFish/ChainTranslator/blob/master/ChainTranslator/__main__.py#L31
         except ValueError as e:
             logme.debug(__name__ + ':Tweet:translator.translate:' + str(e))
