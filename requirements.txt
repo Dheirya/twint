@@ -10,4 +10,3 @@ aiohttp_socks<=0.4.1
 schedule
 geopy
 fake-useragent
-googletransx
